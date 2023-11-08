@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, reset } from 'react'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 
 const ContactForm = () => {
-
+    const emailRegEx = /^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
     const [errorMessage, setErrorMessage] = useState('')
     const form = useFormik({
         initialValues: {
@@ -12,19 +12,20 @@ const ContactForm = () => {
         message: '' 
         },
 
+
         validationSchema: Yup.object( {
             name: Yup.string()
                 .required('You must add a name')
                 .min(2, 'Name must be a minimum of two letters'),
             email: Yup.string()
                 .required('You must enter an e-mail addess')
-                .email('You must enter a valid e-mail addess'),
+                .matches(emailRegEx, 'You must enter a valid e-mail addess'),
             message: Yup.string()
                 .required('You must add a message')
                 .min(2, 'Add a valid message')
         }),
 
-        onSubmit: async (values) => {
+        onSubmit: async (values, {resetForm} ) => {
                 
             const result = await fetch('https://win23-assignment.azurewebsites.net/api/contactform', {
                 method: 'post',
@@ -33,7 +34,6 @@ const ContactForm = () => {
                 }, 
                 body: JSON.stringify(values)
             })
-            console.log(result.status)
 
             switch (result.status) {
                 case 200:
@@ -42,10 +42,10 @@ const ContactForm = () => {
                 case 400:
                     setErrorMessage('Something went wrong!')
                     break;
-                case 409:
-                    setErrorMessage('')
-                    break; 
             }
+
+            resetForm({ values: ''})
+
         }
     
     })

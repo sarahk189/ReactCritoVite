@@ -1699,7 +1699,7 @@ header .container .menu .main-menu .btn-login {
   background-color: #F0EFE9;
   justify-content: center;
   align-items: center;
-  width: auto;
+  width: 100%;
   padding-top: 125px;
   padding-bottom: 100px;
 }
@@ -1715,17 +1715,19 @@ header .container .menu .main-menu .btn-login {
 }
 @media (min-width: 280px) {
   .contact-form .container .form-title {
-    width: auto;
+    width: 100%;
   }
 }
 @media (min-width: 1024px) {
   .contact-form .container .form-title {
+    width: auto;
     margin-left: 100px;
     margin-right: 100px;
   }
 }
 @media (min-width: 1080px) {
   .contact-form .container .form-title {
+    width: auto;
     margin-left: 440px;
     margin-right: 440px;
   }
@@ -1791,28 +1793,27 @@ header .container .menu .main-menu .btn-login {
   display: inline-block;
   width: 100%;
   text-align: center;
+  align-items: center;
   margin-top: 70px;
 }
 @media (max-width: 280px) {
   .contact-form .container button {
-    width: 270px;
+    width: 100%;
   }
 }
 @media (min-width: 280px) {
   .contact-form .container button {
-    width: auto;
+    width: 100%;
   }
 }
 @media (min-width: 1024px) {
   .contact-form .container button {
-    margin-left: 100px;
-    margin-right: 100px;
+    width: 100%;
   }
 }
 @media (min-width: 1080px) {
   .contact-form .container button {
-    margin-left: 440px;
-    margin-right: 440px;
+    width: 100%;
   }
 }
 
