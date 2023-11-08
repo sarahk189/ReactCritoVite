@@ -5,12 +5,14 @@ import News from './views/News'
 import NotFound from './views/NotFound'
 import Service from './views/NewsDetails'
 import Contact from './views/Contact'
+// import AutoScrollToTop from './components/generics/ScrollToTop'
 
 function App() {
 
 
   return (
    <BrowserRouter>
+   {/* <AutoScrollToTop /> */}
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/newsdetails' element={<Service />} />

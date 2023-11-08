@@ -10,6 +10,7 @@ import ProjectAndCaseStudies from '../components/Main/ProjectAndCaseStudies/Proj
 import MeetOurTeam from '../components/Main/MeetOurTeam/MeetOurTeam'
 import Testimonials from '../components/Main/Testimonials/Testimonials'
 import ArticleAndNews from '../components/Main/ArticleAndNews/ArticleAndNews'
+import NewsAndUpdates from '../components/Main/NewsAndUpdates/NewsAndUpdates'
 import Footer from '../components/Footer/Footer'
 
 const Home = () => {
@@ -26,6 +27,7 @@ const Home = () => {
         <MeetOurTeam />
         <Testimonials />
         <ArticleAndNews />
+        <NewsAndUpdates />
         <Footer />
     </>
   )

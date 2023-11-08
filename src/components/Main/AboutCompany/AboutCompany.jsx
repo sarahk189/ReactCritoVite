@@ -3,6 +3,7 @@ import SectionTitle from '../../generics/SectionTitle'
 import img_squigglyLine from '../../../Assets/images/EWlement.svg'
 import img_samantha from '../../../Assets/images/Samantha.png'
 import Button from '../../generics/Button'
+import { Link } from 'react-router-dom'
 
 const AboutCompany = () => {
   return (
@@ -47,12 +48,12 @@ const AboutCompany = () => {
                         <div className="learn-more-and-film">
                             <Button type="black" url="/learnmore" name="Learn More " />
                             <div className="film">
-                                <a href="#">
-                                    <a className="btn-transparent">     
+                                <Link href="#">
+                                    <button className="btn-transparent">     
                                         <i className="fa-sharp fa-solid fa-play"></i>
-                                    </a>
+                                    </button>
                                     <div className="intro-text">Intro Video</div>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
