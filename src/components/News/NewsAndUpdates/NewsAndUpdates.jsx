@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from '../../generics/Button'
-import img_newsSquiggly from '../../../Assets/images/background-wavy-lines.svg'
+import img_newsSquiggly from '../../../assets/images/background-wavy-lines.svg'
 
 const NewsAndUpdates = () => {
   return (

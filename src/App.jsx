@@ -3,8 +3,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './views/Home'
 import News from './views/News'
 import NotFound from './views/NotFound'
-import Service from './views/NewsDetails'
+import NewsDetails from './views/NewsDetails'
 import Contact from './views/Contact'
+import { ArticleProvider } from '../src/components/News/NewsDetails/ArticleContext'
 // import AutoScrollToTop from './components/generics/ScrollToTop'
 
 function App() {
@@ -12,14 +13,16 @@ function App() {
 
   return (
    <BrowserRouter>
-   {/* <AutoScrollToTop /> */}
-    <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='/newsdetails' element={<Service />} />
-      <Route path='/news' element={<News />} />
-      <Route path='/contact' element={<Contact />} />
-      <Route path='*' element={<NotFound />} />
-    </Routes>
+    <ArticleProvider>
+      {/* <AutoScrollToTop /> */}
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/newsdetails' element={<NewsDetails />} />
+        <Route path='/news' element={<News />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='*' element={<NotFound />} />
+      </Routes>
+    </ArticleProvider>
    </BrowserRouter>
   )
 }
