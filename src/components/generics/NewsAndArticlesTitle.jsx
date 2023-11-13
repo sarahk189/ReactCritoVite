@@ -1,5 +1,5 @@
 import React from 'react'
-import img_backgroundLines from '../../../assets/images/background-lines.svg'
+import img_backgroundLines from '../../assets/images/background-lines.svg'
 
 const NewsAndArticlesTitle = () => {
   return (

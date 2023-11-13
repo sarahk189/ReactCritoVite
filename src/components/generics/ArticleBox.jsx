@@ -1,19 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 
-const ArticleBox = ({ id, img, alt, title, category, content, published }) => {
+
+const ArticleBox = ({ img, title, published, category, author, content }) => {
 
   const publishedDate = new Date(published);
-
   const month = publishedDate.toLocaleString('default', { month: 'short' });
   const day = publishedDate.getDate();
 
   return (
     <div className="col">
-      <Link to={`/${id}`}>
+      <div className='article'>
         <div className="img-date">
-          <img src={img} alt={alt} />
+          <img src={img} alt={title} />
           <div className="date-square">
             <div className="day">{day}</div>
             <div className="month">{month}</div>
@@ -22,7 +21,7 @@ const ArticleBox = ({ id, img, alt, title, category, content, published }) => {
         <div className="business">{category}</div>
         <h3>{title}</h3>
         <p>{content}</p>
-      </Link>
+      </div>
     </div>
   );
 };

@@ -2038,7 +2038,7 @@ footer .container .bottom-footer .social-media a:hover {
     text-align: start;
   }
 }
-.article-page-news .container .row .col a {
+.article-page-news .container .row .col .article {
   text-decoration: none;
   color: #191919;
   padding-right: 300px;
@@ -2048,58 +2048,58 @@ footer .container .bottom-footer .social-media a:hover {
   align-items: center;
 }
 @media (min-width: 1200px) {
-  .article-page-news .container .row .col a {
+  .article-page-news .container .row .col .article {
     width: 300px;
     padding: 0px;
     justify-content: start;
   }
 }
 @media (min-width: 1281px) {
-  .article-page-news .container .row .col a {
+  .article-page-news .container .row .col .article {
     width: 420px;
   }
 }
-.article-page-news .container .row .col a:hover {
+.article-page-news .container .row .col .article:hover {
   text-decoration: underline;
   color: #191919;
 }
-.article-page-news .container .row .col a .img-date {
+.article-page-news .container .row .col .article .img-date {
   width: 275px;
   height: 150px;
   justify-content: center;
   padding-left: 40px;
 }
 @media (max-width: 280px) {
-  .article-page-news .container .row .col a .img-date {
+  .article-page-news .container .row .col .article .img-date {
     padding: 0;
     width: 200px;
   }
 }
 @media (min-width: 540px) {
-  .article-page-news .container .row .col a .img-date {
+  .article-page-news .container .row .col .article .img-date {
     padding-left: 50px;
     padding-right: 50px;
   }
 }
 @media (min-width: 768px) {
-  .article-page-news .container .row .col a .img-date {
+  .article-page-news .container .row .col .article .img-date {
     padding-left: 30px;
     padding-right: 30px;
   }
 }
 @media (min-width: 820px) {
-  .article-page-news .container .row .col a .img-date {
+  .article-page-news .container .row .col .article .img-date {
     padding-left: 22px;
     padding-right: 0px;
   }
 }
 @media (min-width: 1024px) {
-  .article-page-news .container .row .col a .img-date {
+  .article-page-news .container .row .col .article .img-date {
     padding-left: 0px;
     padding-right: 0px;
   }
 }
-.article-page-news .container .row .col a .img-date img {
+.article-page-news .container .row .col .article .img-date img {
   width: 270px;
   height: 190px;
   align-items: center;
@@ -2107,23 +2107,23 @@ footer .container .bottom-footer .social-media a:hover {
      object-fit: cover;
 }
 @media (max-width: 280px) {
-  .article-page-news .container .row .col a .img-date img {
+  .article-page-news .container .row .col .article .img-date img {
     padding-left: 10px;
     width: 250px;
   }
 }
 @media (max-width: 1024px) {
-  .article-page-news .container .row .col a .img-date img {
+  .article-page-news .container .row .col .article .img-date img {
     align-items: start;
     padding: 0px;
   }
 }
 @media (min-width: 1281px) {
-  .article-page-news .container .row .col a .img-date img {
+  .article-page-news .container .row .col .article .img-date img {
     width: 420px;
   }
 }
-.article-page-news .container .row .col a .img-date .date-square {
+.article-page-news .container .row .col .article .img-date .date-square {
   width: 56px;
   height: 64px;
   background-color: #F9D783;
@@ -2134,19 +2134,19 @@ footer .container .bottom-footer .social-media a:hover {
   top: -140px;
   left: 10px;
 }
-.article-page-news .container .row .col a .img-date .date-square .day {
+.article-page-news .container .row .col .article .img-date .date-square .day {
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
   font-size: 22px;
   padding-bottom: 0px;
   padding-top: 7px;
 }
-.article-page-news .container .row .col a .img-date .date-square .month {
+.article-page-news .container .row .col .article .img-date .date-square .month {
   padding-top: 3px;
   font-family: "Inter", sans-serif;
   font-size: 16px;
 }
-.article-page-news .container .row .col a .business {
+.article-page-news .container .row .col .article .business {
   font-size: 16;
   font-weight: 500;
   padding-bottom: 15px;
@@ -2154,47 +2154,47 @@ footer .container .bottom-footer .social-media a:hover {
   margin-top: 40px;
 }
 @media (min-width: 1024px) {
-  .article-page-news .container .row .col a .business {
+  .article-page-news .container .row .col .article .business {
     margin-top: 0px;
     width: 300px;
     padding-top: 110px;
   }
 }
 @media (min-width: 1281px) {
-  .article-page-news .container .row .col a .business {
+  .article-page-news .container .row .col .article .business {
     width: 420px;
     padding-bottom: 30px;
   }
 }
-.article-page-news .container .row .col a h3 {
+.article-page-news .container .row .col .article h3 {
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
   font-size: 22px;
   padding-bottom: 8px;
 }
 @media (min-width: 1024px) {
-  .article-page-news .container .row .col a h3 {
+  .article-page-news .container .row .col .article h3 {
     width: 300px;
   }
 }
 @media (min-width: 1281px) {
-  .article-page-news .container .row .col a h3 {
+  .article-page-news .container .row .col .article h3 {
     width: 420px;
     padding-bottom: 25px;
   }
 }
-.article-page-news .container .row .col a p {
+.article-page-news .container .row .col .article p {
   font-size: 16;
   line-height: 1.8;
   padding-bottom: 25px;
 }
 @media (min-width: 1024px) {
-  .article-page-news .container .row .col a p {
+  .article-page-news .container .row .col .article p {
     width: 300px;
   }
 }
 @media (min-width: 1281px) {
-  .article-page-news .container .row .col a p {
+  .article-page-news .container .row .col .article p {
     width: 420px;
     padding-bottom: 0px;
   }

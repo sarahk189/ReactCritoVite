@@ -14,8 +14,30 @@ export const useArticles = () => {
 export const ArticleProvider = ({ children }) => {
   const apiUrl = 'https://win23-assignment.azurewebsites.net/api/articles';
   const [articles, setArticles] = useState([]);
-  const [article, setArticle] = useState([null]);
+  const [article, setArticle] = useState(null);
   const { id } = useParams();
+
+  const setSelectedArticle = (articleId) => {
+    getArticle(articleId);
+  };
+
+  const getArticle = async (articleId) => {
+    try {
+      if (articleId) {
+        const result = await fetch(`${apiUrl}/${articleId}`);
+
+        if (result.status !== 200) {
+          console.log(`Error: ${result.status}`);
+          return;
+        }
+
+        const data = await result.json();
+        setArticle(data);
+      }
+    } catch (error) {
+      console.error("Error fetching article", error);
+    }
+  };
 
   useEffect(() => {
     const getArticles = async () => {
@@ -35,31 +57,15 @@ export const ArticleProvider = ({ children }) => {
       }
     };
 
-    const getArticle = async (articleId) => {
-      try {
-        if (articleId) {
-          const result = await fetch(`${apiUrl}/${articleId}`);
+    setSelectedArticle(id); 
 
-          if (result.status !== 200) {
-            console.log(`Error: ${result.status}`);
-            return;
-          }
-
-          const data = await result.json();
-          setArticle(data);
-        }
-      } catch (error) {
-        console.error("Error fetching article", error);
-      }
-    };
-
-      getArticles();
-      getArticle(id);
-    }, [id]);
+    getArticles();
+  }, [id, apiUrl]);
 
   const contextValue = {
-    articles, 
+    articles,
     article,
+    setSelectedArticle, 
   };
 
   return (

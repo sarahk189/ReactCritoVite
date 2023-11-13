@@ -1,8 +1,8 @@
 import React from 'react'
 import SectionTitle from '../../generics/SectionTitle'
 import Button from '../../generics/Button'
-import ArticleBox from '../../News/News/ArticleBox'
-import { useArticles } from '../../News/NewsDetails/ArticleContext'
+import ArticleBox from '../../generics/ArticleBox'
+import { useArticles } from '../../NewsDetails/ArticleContext'
 
 const ArticleAndNews = () => {
 
