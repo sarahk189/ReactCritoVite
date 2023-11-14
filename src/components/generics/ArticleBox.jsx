@@ -2,7 +2,7 @@ import React from 'react';
 
 
 
-const ArticleBox = ({ img, title, published, category, author, content }) => {
+const ArticleBox = ({ img, title, published, category, content }) => {
 
   const publishedDate = new Date(published);
   const month = publishedDate.toLocaleString('default', { month: 'short' });
@@ -12,7 +12,9 @@ const ArticleBox = ({ img, title, published, category, author, content }) => {
     <div className="col">
       <div className='article'>
         <div className="img-date">
-          <img src={img} alt={title} />
+          <div className='image-contianer'>
+            <img src={img} alt={title} />
+          </div>
           <div className="date-square">
             <div className="day">{day}</div>
             <div className="month">{month}</div>

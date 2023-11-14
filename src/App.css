@@ -1183,149 +1183,53 @@ header .container .menu .main-menu .btn-login {
 }
 .article-news .container .row .col {
   padding-top: 30px;
-  padding-right: 10px;
-  padding-left: 10px;
-  width: 275px;
+  flex: 1;
+  width: 100%;
   text-align: center;
   align-items: center;
-  justify-content: center;
-}
-@media (min-width: 375px) {
-  .article-news .container .row .col {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-}
-@media (min-width: 390px) {
-  .article-news .container .row .col {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-@media (min-width: 400px) {
-  .article-news .container .row .col {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-}
-@media (min-width: 540px) {
-  .article-news .container .row .col {
-    padding-left: 90px;
-    padding-right: 90px;
-  }
-}
-@media (min-width: 768px) {
-  .article-news .container .row .col {
-    padding-left: 200px;
-    padding-right: 200px;
-    padding-top: 20px;
-    width: 300px;
-  }
-}
-@media (min-width: 820px) {
-  .article-news .container .row .col {
-    padding-left: 200px;
-    padding-right: 200px;
-  }
 }
 @media (min-width: 1024px) {
   .article-news .container .row .col {
-    padding-left: 20px;
-    padding-right: 0px;
-    width: 250px;
-    align-items: start;
     text-align: start;
   }
 }
-@media (min-width: 1200px) {
-  .article-news .container .row .col {
-    width: 400px;
-    align-items: start;
-    text-align: start;
-  }
-}
-.article-news .container .row .col a {
+.article-news .container .row .col .article {
+  flex: 1;
   text-decoration: none;
   color: #191919;
   padding-right: 300px;
   padding-left: 300px;
-  width: 275px;
+  width: 100%;
+  height: auto;
   justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 @media (min-width: 1200px) {
-  .article-news .container .row .col a {
-    width: 300px;
-    padding: 0px;
+  .article-news .container .row .col .article {
     justify-content: start;
   }
 }
-@media (min-width: 1281px) {
-  .article-news .container .row .col a {
-    width: 420px;
-  }
-}
-.article-news .container .row .col a:hover {
+.article-news .container .row .col .article:hover {
   text-decoration: underline;
   color: #191919;
 }
-.article-news .container .row .col a .img-date {
-  width: 275px;
-  height: 150px;
-  justify-content: center;
-  padding-left: 40px;
-}
-@media (max-width: 280px) {
-  .article-news .container .row .col a .img-date {
-    padding: 0;
-    width: 200px;
-  }
-}
-@media (min-width: 540px) {
-  .article-news .container .row .col a .img-date {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-}
-@media (min-width: 768px) {
-  .article-news .container .row .col a .img-date {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-}
-@media (min-width: 820px) {
-  .article-news .container .row .col a .img-date {
-    padding-left: 22px;
-    padding-right: 0px;
-  }
-}
-@media (min-width: 1024px) {
-  .article-news .container .row .col a .img-date {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-}
-.article-news .container .row .col a .img-date img {
-  width: 275px;
+.article-news .container .row .col .article .img-date {
+  width: 270px;
+  height: 190px;
   align-items: center;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-@media (max-width: 280px) {
-  .article-news .container .row .col a .img-date img {
-    padding-left: 10px;
-    width: 250px;
-  }
+.article-news .container .row .col .article .img-date img {
+  width: 410px;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-@media (max-width: 1024px) {
-  .article-news .container .row .col a .img-date img {
-    align-items: start;
-    padding: 0px;
-  }
-}
-@media (min-width: 1281px) {
-  .article-news .container .row .col a .img-date img {
-    width: 420px;
-  }
-}
-.article-news .container .row .col a .img-date .date-square {
+.article-news .container .row .col .article .img-date .date-square {
   width: 56px;
   height: 64px;
   background-color: #F9D783;
@@ -1336,85 +1240,58 @@ header .container .menu .main-menu .btn-login {
   top: -140px;
   left: 10px;
 }
-.article-news .container .row .col a .img-date .date-square .number {
+.article-news .container .row .col .article .img-date .date-square .number {
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
   font-size: 22px;
   padding-bottom: 0px;
   padding-top: 7px;
 }
-.article-news .container .row .col a .img-date .date-square .month {
+.article-news .container .row .col .article .img-date .date-square .month {
   padding-top: 3px;
   font-family: "Inter", sans-serif;
   font-size: 16px;
 }
-.article-news .container .row .col a .business {
-  font-size: 16;
+.article-news .container .row .col .article .business {
+  font-size: 16px;
   font-weight: 500;
   padding-bottom: 15px;
-  padding-top: 0px;
+  margin-top: 100px;
+  text-decoration: none;
 }
-@media (min-width: 1024px) {
-  .article-news .container .row .col a .business {
-    width: 300px;
-    padding-top: 110px;
-  }
-}
-@media (min-width: 1281px) {
-  .article-news .container .row .col a .business {
-    width: 420px;
-    padding-bottom: 30px;
-  }
-}
-.article-news .container .row .col a h3 {
+.article-news .container .row .col .article h3 {
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
   font-size: 22px;
   padding-bottom: 8px;
+  text-decoration: none;
 }
 @media (min-width: 1024px) {
-  .article-news .container .row .col a h3 {
+  .article-news .container .row .col .article h3 {
     width: 300px;
   }
 }
 @media (min-width: 1281px) {
-  .article-news .container .row .col a h3 {
+  .article-news .container .row .col .article h3 {
     width: 420px;
     padding-bottom: 25px;
   }
 }
-.article-news .container .row .col a p {
+.article-news .container .row .col .article p {
   font-size: 16;
   line-height: 1.8;
   padding-bottom: 25px;
 }
 @media (min-width: 1024px) {
-  .article-news .container .row .col a p {
+  .article-news .container .row .col .article p {
     width: 300px;
   }
 }
 @media (min-width: 1281px) {
-  .article-news .container .row .col a p {
+  .article-news .container .row .col .article p {
     width: 420px;
     padding-bottom: 0px;
   }
-}
-.article-news .container .dots {
-  display: none;
-}
-@media (min-width: 1281px) {
-  .article-news .container .dots {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 80px;
-  }
-}
-.article-news .container .dots i {
-  padding-top: 30px;
-  padding-left: 15px;
-  padding-bottom: 90px;
-  font-size: 20px;
 }
 
 .news-updates-signup {

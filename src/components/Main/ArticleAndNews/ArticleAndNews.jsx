@@ -3,10 +3,31 @@ import SectionTitle from '../../generics/SectionTitle'
 import Button from '../../generics/Button'
 import ArticleBox from '../../generics/ArticleBox'
 import { useArticles } from '../../NewsDetails/ArticleContext'
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import { Link } from 'react-router-dom'
 
 const ArticleAndNews = () => {
 
     const { articles } = useArticles({})
+
+    const responsive = {
+        desktop: {
+          breakpoint: { max: 3000, min: 1024 },
+          items: 3,
+          slidesToSlide: 3
+        },
+        tablet: {
+          breakpoint: { max: 1024, min: 464 },
+          items: 2,
+          slidesToSlide: 2
+        },
+        mobile: {
+          breakpoint: { max: 464, min: 0 },
+          items: 1,
+          slidesToSlide: 1
+        }
+      };
   
     return (
     <section className="article-news">
@@ -17,30 +38,34 @@ const ArticleAndNews = () => {
                     </div>
 
                     <div className="button-news">
-                      <Button type="transparent" url="/browsearticles" name="Browse Articles " />
+                      <Button type="transparent" url="/news" name="Browse Articles " />
                     </div>
                 </div>
 
                 <div className="row">
-                    {
-                        articles.map((article) => (
-                            <ArticleBox 
-                            key={article.id} 
-                            to={`https://win23-assignment.azurewebsites.net/api/articles/${article.id}`} 
-                            img={article.imageUrl} 
-                            title={article.title} 
-                            published={article.published} 
-                            />
-                        ))
-                    }
-                </div>
-
-                <div className="dots">
-                    <i className="fa-sharp fa-solid fa-circle-small"></i>
-                    <i className="fa-duotone fa-circle-small"></i>
-                    <i className="fa-duotone fa-circle-small"></i>
-                    <i className="fa-duotone fa-circle-small"></i>
-                    <i className="fa-duotone fa-circle-small"></i>
+                    <section className='carousel'>
+                        <Carousel
+                        responsive={responsive}
+                        showDots={true}
+                        infinite={true}
+                        >
+                            {articles.map((article) => (
+                            <Link
+                              key={article.id}
+                              to={`/articles/${article.id}`}
+                              className="col-md-4"
+                            >
+                              <ArticleBox
+                                key={article.id}
+                                img={article.imageUrl}
+                                title={article.title}
+                                published={article.published}
+                                category={article.category}
+                              />
+                            </Link>
+                            ))}
+                        </Carousel>
+                    </section>
                 </div>
             </div>
         </section>
