@@ -3,6 +3,7 @@ import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 import NewsAndArticlesTitle from '../components/generics/NewsAndArticlesTitle'
 import NewsAndUpdates from '../components/Main/NewsAndUpdates/NewsAndUpdates'
+import ArticleAndNews from '../components/Main/ArticleAndNews/ArticleAndNews'
 import Article from '../components/NewsDetails/Article'
 import { useArticles } from '../components/NewsDetails/ArticleContext'
 import { useParams } from 'react-router-dom'
@@ -32,6 +33,7 @@ const NewsDetails = () => {
     author={article.author}
     content={article.content}
     />
+    <ArticleAndNews />
     <NewsAndUpdates />
     <Footer />
     </>

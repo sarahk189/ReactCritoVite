@@ -2,6 +2,7 @@
 .article {
     
     .container {
+        margin-top: 4em;
         text-align: center;
 
         @media (min-width: 1281px) {
@@ -49,14 +50,65 @@
 
             .left {
                 padding-right: 50px;
+                
                 .article-image  {
                     img {
-                        width: 100% ;
+                        width: 50em ;
                         height: auto;
+                        object-fit: cover;
                         padding: 10px;
                     }
                 }
-                    
+                
+                .content {
+                    font-size: 16px;
+                    text-align: center;
+
+                    @media (min-width: 1281px) {
+                        text-align: left;
+                    }
+
+                    .paragraph {
+                        padding: 20px 10px 10px 10px
+                    }
+
+                    .quote {
+                        font-family: 'DM Sans', sans-serif;
+                        font-size: 22px;
+                        font-weight: 400;
+                        font-style: italic;
+                        padding: 20px 10px 10px 10px;
+                        
+                        i {
+                            font-size: 2em;
+                        }
+                    }
+                }
+
+                button {
+                    background-color: #ebebeb;
+                    border: none;
+                    color: #191919;
+                    font-family: 'Inter', sans-serif;
+                    text-decoration: none;
+                    padding: 13px 35px;
+                    font-weight: 600;
+                    font-size: 16px;
+                    border-radius: 25px;
+                    margin-right: 10px;
+                    margin-bottom: 20px;
+
+                    i {
+                        margin-left: 8px;
+                        font-size: 0.9em;
+                    }
+
+                    &:hover {
+                        background-color: #191919;
+                        border: 1px solid #191919;
+                        color: #F0EFE9;
+                    }
+                }
             }
     
             .right {
@@ -112,10 +164,16 @@
                             font-size: 2em;
                             position: relative;
                             top: -20px;
+                            left: 358px;
                             padding-left: 20px;
                             display: block;
                             width: 0px;
                             height: 10px;
+
+                            @media (min-width: 1281px) {
+                                top: -20px;
+                                left: 0px;
+                            }
                         }
                     }
 
@@ -166,10 +224,16 @@
                             font-size: 2em;
                             position: relative;
                             top: -20px;
+                            left: -59px;
                             padding-left: 20px;
-                            display: block;
+                            display: inline-block;
                             width: 0px;
                             height: 10px;
+
+                            @media (min-width: 1281px) {
+                                top: -20px;
+                                left: 0px;
+                            }
                         }
                     }
 
