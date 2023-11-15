@@ -52,7 +52,7 @@ const AboutCompany = () => {
                                     <button className="btn-transparent">     
                                         <i className="fa-sharp fa-solid fa-play"></i>
                                     </button>
-                                    <div className="intro-text">Intro Video</div>
+                                    <span className="intro-text">Intro Video</span>
                                 </Link>
                             </div>
                         </div>

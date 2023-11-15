@@ -2,7 +2,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useArticles } from '../NewsDetails/ArticleContext';
-import Button from '../generics/Button';
 
 const Article = () => {
   const { id } = useParams();

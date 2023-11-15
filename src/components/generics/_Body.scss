@@ -80,17 +80,17 @@ html, body {
 }
 
 .section-title {
-    padding-top: 70px;
+    padding-top: 50px;
     padding-bottom: 40px;
 
     @media (min-width: 768px) {
-        padding-top: 90px;
-        padding-bottom: 70px;
+        padding-top: 50px;
+        padding-bottom: 40px;
     }
 
     @media (min-width: 1200px) {
-        padding-top: 120px;
-        padding-bottom: 90px;
+        padding-top: 50px;
+        padding-bottom: 40px;
     }
 
     p {
@@ -119,4 +119,26 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+nav {
+    margin-bottom: 10px;
+    font-weight: 200;
+    justify-content: space-between;
+
+    a{
+        text-decoration: none;
+        color: #191919;
+        padding: 5px;
+        
+        &.active {
+            font-weight: 500;
+        }
+
+        &:hover {
+            content: ' ';
+            font-weight: 500;
+        }
+    }
 }

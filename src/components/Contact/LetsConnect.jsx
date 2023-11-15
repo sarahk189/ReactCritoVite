@@ -1,5 +1,6 @@
 import React from 'react'
 import img_backgroundLines from '../../assets/images/background-lines.svg'
+import { NavLink } from 'react-router-dom'
 
 const LetsConnect = () => {
   return (
@@ -9,10 +10,10 @@ const LetsConnect = () => {
             
             <div className="container">
 
-                <p>
-                    <a href="/">Home</a>
-                    <a className= "active" href="/contact">Contact</a>
-                </p>
+                <nav>
+                    <NavLink to="/">Home</NavLink>
+                    <NavLink to="/contact">Contact</NavLink>
+                </nav>
                 <h2>Let's Connect</h2>
 
                 <div className="contact-squiggly">
