@@ -11,7 +11,12 @@ const Article = () => {
     return <div>Article not found</div>;
   }
 
-  const { title, published, category, author, imageUrl, content, } = article;
+  const { title, published, category, author, imageUrl, content } = article;
+  const publishedDate = new Date(published);
+  const month = publishedDate.toLocaleString('default', { month: 'short' });
+  const day = publishedDate.getDate();
+  const year = publishedDate.getFullYear();
+
 
   return (
     <section className='article'>
@@ -19,7 +24,7 @@ const Article = () => {
         <div key={id}>
           <h3>{title}</h3>
           <div className='date-author'>
-              <p>{published}</p>
+              <p>{month} {day}, {year}</p>
               <i className="fa-solid fa-circle"></i>
               <p>{category}</p>
               <i className="fa-solid fa-circle"></i>

@@ -2,6 +2,35 @@ footer {
     background-color: #191919;
     color: #dad9d3;
     padding-top: 133px;
+
+    .nav-menu {
+        background-color: #191919;
+        color: white;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        padding: 70px;
+        z-index: 2;
+
+        a{
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .active {
+            background-color: #5d5b5b;
+            border-radius: 25px;
+        }
+
+        @media (min-width: 992px) {
+            display: none;
+            }
+    }
     
     .container {
         display: flex;
@@ -15,6 +44,8 @@ footer {
             justify-content: end;
             flex: 1;
             padding-bottom: 50px;
+            color: #F0EFE9;
+            z-index: 2;
 
 
             @media (min-width: 1281px){

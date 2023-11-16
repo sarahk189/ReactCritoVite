@@ -1,15 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import img_critoLogo from '../../Assets/images/Logo.svg'
 import Button from '../generics/Button'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
+import MenuBars from './MenuBars'
 
 
 const Header = () => {
+    const [menuOpen, setMenuOpen] = useState(false)
+    
+
   return (
-    <header>
+    <header>¨
+        {menuOpen ? (<MenuBars />) : (<></>)}
         <div className="container">
-            <a href="index.html"><img className= "crito-logo" src={img_critoLogo} alt="crito logotype" /></a>
-            <button className="menu-bars"><i className="fa-regular fa-bars"></i></button>
+            <Link to="/"><img className= "crito-logo" src={img_critoLogo} alt="crito logotype" /></Link>
+            <button onClick={() => setMenuOpen(!menuOpen)} className="menu-bars">
+                {menuOpen ? (<i class="fa-regular fa-x"></i>) : (<i className="fa-regular fa-bars"></i>)}
+            </button>
             <div className="menu">
                 <div className="top-menu">
                     <div className="contact-information">

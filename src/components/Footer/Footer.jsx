@@ -1,19 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import img_critoblack from '../../Assets/images/Logo black background.svg'
 import img_linesWhiteRight from '../../Assets/images/background-lines-white-right.svg'
+import MenuBars from '../Header/MenuBars'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
+    const [menuOpen, setMenuOpen] = useState(false)
+
   return (
   <footer>
+    {menuOpen ? (<MenuBars />) : (<></>)}
     <div className="container">
         <div className="menu-bars">
-            <a href="index.html"><img className= "crito-logo" src={img_critoblack} alt="crito logotype" /></a>
-            <button className="menu-bars"><i className="fa-regular fa-bars"></i></button>
+            <Link to='/'><img className= "crito-logo" src={img_critoblack} alt="crito logotype" /></Link>
+            <button onClick={() => setMenuOpen(!menuOpen)} className="menu-bars">
+                {menuOpen ? (<i class="fa-regular fa-x"></i>) : (<i className="fa-regular fa-bars"></i>)}
+            </button>
         </div>
         <div className="footer-index">
             <div className="row">
                 <div className="col-3">
-                    <a href="index.html"><img className= "crito-logo" src={img_critoblack} alt="crito logotype" /></a>
+                    <Link to='/'><img className= "crito-logo" src={img_critoblack} alt="crito logotype" /></Link>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat obcaecati voluptas voluptates! Voluptates laborum nam ratione minus necessitatibus, iure praesentium.</p>
                 </div>
                 <div className="col-1">
