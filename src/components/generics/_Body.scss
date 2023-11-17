@@ -6,6 +6,23 @@ html, body {
     line-height: 1.5;
 }
 
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #7d6c68;
+    height: 40px;
+    width: 40px;
+    font-weight: 800;
+    background-color: transparent;
+    z-index: 3;
+    font-size: 18px;
+}
+
+.hide {
+    display: none;
+}
+
 .wrapper-grid {
     height: 100vh;
     display: grid;
@@ -142,3 +159,4 @@ nav {
         }
     }
 }
+

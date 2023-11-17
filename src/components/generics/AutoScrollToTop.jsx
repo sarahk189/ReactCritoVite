@@ -1,13 +1,15 @@
-// import React from 'react'
-// import {useLocation} from "react-router-dom"
+import React from 'react'
+import { useEffect } from 'react'
+import { useLocation } from "react-router-dom"
 
-// const ScollToTop = () => {
-//     const location = useLocation
+const AutoScrollToTop = () => {
+    const location = useLocation()
 
-//     useEffect (() => {
-//         window.scrollTo({ top: 0, behavior: 'instant'})
-//     }, [location.pathname])
-//   return null
-// }
+    useEffect (() => {
+        window.scrollTo({ top: 0, behavior: 'instant'})
+    }, [location.pathname])
 
-// export default ScollToTop
+  return null
+}
+
+export default AutoScrollToTop

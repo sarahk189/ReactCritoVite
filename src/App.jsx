@@ -6,14 +6,16 @@ import NotFound from './views/NotFound'
 import NewsDetails from './views/NewsDetails'
 import Contact from './views/Contact'
 import { ArticleProvider } from '../src/components/NewsDetails/ArticleContext'
-// import AutoScrollToTop from './components/generics/ScrollToTop'
+import AutoScrollToTop from './components/generics/AutoScrollToTop'
+import ScrollToTop from './components/generics/ScrollToTop'
 
 function App() {
 
   return (
    <BrowserRouter>
+    <AutoScrollToTop />
+    <ScrollToTop />
     <ArticleProvider>
-      {/* <AutoScrollToTop /> */}
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path="/articles/:id" element={<NewsDetails />} />
